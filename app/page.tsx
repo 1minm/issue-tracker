@@ -1,6 +1,5 @@
 "use client"
 
-import { useSearchParams } from "next/navigation"
 import Pagination from "./components/Pagination"
 import "./theme-config.css"
 
