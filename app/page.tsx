@@ -1,18 +1,6 @@
-"use client"
-
-import Pagination from "./components/Pagination"
+import LatestIssues from "./LatestIssues"
 import "./theme-config.css"
 
-export default function Home({
-	searchParams,
-}: {
-	searchParams: { page: string }
-}) {
-	return (
-		<Pagination
-			itemCount={21}
-			pageSize={10}
-			currentPage={parseInt(searchParams.page)}
-		/>
-	)
+export default function Home() {
+	return <LatestIssues />
 }
