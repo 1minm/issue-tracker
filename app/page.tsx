@@ -4,6 +4,7 @@ import "./theme-config.css"
 import IssueSummary from "./IssueSummary"
 import IssueChart from "./IssueChart"
 import LatestIssues from "./LatestIssues"
+import { Metadata } from "next/types"
 
 export default async function Home() {
 	const open = await prisma.issue.count({ where: { status: "OPEN" } })
@@ -20,4 +21,9 @@ export default async function Home() {
 			<LatestIssues />
 		</Grid>
 	)
+}
+
+export const metadata: Metadata = {
+	title: "Issue Tracker - Dashboard",
+	description: "View a summary of project issues",
 }
